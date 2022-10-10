@@ -1,0 +1,18 @@
+<div class="buy-page">
+<div class="showProduct">
+    <div class="img-div">
+        <img src="{{selectedProduct.img}}" />
+    </div>
+    <div class="desc">
+        <h3>{{selectedProduct.name}}</h3>
+        <h4>{{selectedProduct.price | currency}}</h4>
+        <p>{{selectedProduct.description[0]}}</p>
+        
+        <div>
+            <button class="product-button" routerLink="../../directbuy" (click)="buyDirect(selectedProduct)">Buy Now</button>&nbsp;
+            <button  class="product-button" routerLink="../../cart" (click)="cart(selectedProduct)" >Add to Cart</button>
+        </div>
+        <p class="disc"><strong >Full Description :</strong><br>{{selectedProduct.description[1]}}<br></p>
+    </div>
+</div>
+</div>

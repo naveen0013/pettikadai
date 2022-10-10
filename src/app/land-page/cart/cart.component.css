@@ -1,0 +1,47 @@
+.cart-container{
+    display:inline-grid;
+    grid-template-columns: auto auto auto ;
+
+    margin-left: 20%;
+    float:left;
+    width:60%;
+    text-align: center;
+  
+}
+.cartPic img{
+    width:auto;
+    height: 150px;
+}
+.cart{
+    float:left;
+    width: 100%;
+}
+.count{
+    margin-left:180px;
+    background-color: lightsalmon;
+    padding:10px 0 10px 0;
+    width: 100px;
+    border:1px solid lightsalmon;
+    border-radius: 15px;
+}
+.cart .clearCart{
+    float:right;
+    width:20%;
+}
+
+#clearCart{
+    background-color: crimson;
+    border: 0px;
+}
+#clearCart:hover{
+    color:white;
+}
+
+#buyDirect{
+    margin-top: 100px;
+    background-color:darkblue;
+    border:1px solid darkblue;
+}
+#buyDirect:hover{
+    color:white;
+}

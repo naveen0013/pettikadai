@@ -1,0 +1,22 @@
+.product-pic{
+    width:auto;
+    height: 80px;;
+}
+.product-img{
+    display:inline-grid;
+    grid-template-columns: auto auto auto ;
+  
+}
+.directbuy{
+    float:left;
+    width: 100%;
+}
+.directBuy_container{
+    float:left;
+    width: 60%;
+    margin:0 20% 0 20%;
+    border: 1px solid black;
+}
+.directBuy_container form{
+    margin: 20px;
+}

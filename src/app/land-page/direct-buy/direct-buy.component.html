@@ -1,0 +1,19 @@
+<div class="directbuy">
+    <div class="directBuy_container">
+        <form [formGroup]="OrderPlaceforms" (ngSubmit)="OrderPlace()">
+            <div class="product-img" *ngFor="let product of cartProducts" >
+                <img src="{{product.img}}" class="product-pic"/>
+                <p>{{product.count}}</p>
+            </div>
+                <h6>{{totalprice | currency}}</h6>
+                <textarea placeholder="enter delivery Address"  rows="4" cols="50" formControlName="address"></textarea>
+                <div class="paymentRadio" >
+                      <input type="radio" id="online" formControlName="paymentMethod" value="Online Payment">
+                      <label for="online">Online Payment</label><br>
+                      <input type="radio" id="cashOn" formControlName="paymentMethod" value="Cash On delivery">
+                      <label for="cashOn">Cash On delivery</label><br>
+                </div>
+                <button type="submit" class="product-button">Place your Order</button>
+        </form>
+    </div>
+</div>

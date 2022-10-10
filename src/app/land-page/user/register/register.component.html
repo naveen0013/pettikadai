@@ -1,0 +1,28 @@
+<div class="register">
+    <div class="registerform">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <br>
+        <h3>Register</h3><br> 
+        <input type="text" formControlName="username" placeholder="enter username" /> 
+        <span *ngIf="registerForm.get('username')?.touched&&registerForm.get('username')?.hasError('required')" >username is required</span>
+        <br>
+        <input type="mail" formControlName="email" placeholder="enter email address" />
+        <span *ngIf="registerForm.get('email')?.touched&&registerForm.get('email')?.hasError('required')">email address is required</span>
+        <span *ngIf="registerForm.get('email')?.hasError('email')">enter a valid email address</span>
+        <br>
+        <input type="password" formControlName="password" placeholder="enter password" />
+        <span *ngIf="registerForm.get('password')?.touched&&registerForm.get('password')?.hasError('required')">password is required</span>
+        <span *ngIf="registerForm.get('password')?.hasError('minlength')">password should atleast length 6</span>
+        <br>
+        <input type="password" formControlName="confirmpassword" placeholder="confirm-password" />
+        <span *ngIf="registerForm.get('confirmpassword')?.touched&&registerForm.get('confirmpassword')?.hasError('required')">confirm-password is required</span>
+        <span *ngIf="registerForm.get('confirmpassword')?.hasError('minlength')">password should atleast length 6</span>
+        <br>
+        <textarea type="text" formControlName="address" placeholder="enter Address" rows="4" cols="22"></textarea>
+        <span *ngIf="registerForm.get('address')?.touched&&registerForm.get('address')?.hasError('required')">address is required</span>
+        <br>
+        <br>
+        <button type="submit" style="float: left; margin-left: 20px; " class="product-button" [disabled]="!registerForm.valid">Sign up</button><br>
+    </form>
+    </div>
+</div>

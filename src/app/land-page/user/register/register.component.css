@@ -1,0 +1,31 @@
+.register{
+    float:left;
+    width:100%;
+}
+.registerform{
+    float:left;
+    margin: 0 40% 0 40%;
+    width: 20%;
+    text-align: center;
+}
+.registerform h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+.registerform input,textarea{
+    padding:5px 20px 5px 20px;
+    border:1px solid grey;
+    border-radius: 10px;
+  
+    margin: 0 20px 7px 20px;
+}
+input.ng-touched.ng-invalid , textarea.ng-touched.ng-invalid{
+        border: 1px solid darkred;
+}
+.registerform span{
+    padding-left:35px;
+    float:left;
+    font-size: small;
+    color:darkred;
+    text-align: left;
+}

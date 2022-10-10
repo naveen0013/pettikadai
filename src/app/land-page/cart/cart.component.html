@@ -1,0 +1,15 @@
+<diV class="cart">
+<div class="cart-container">
+    <div *ngFor="let cartPr of copyCart" class="cartPic">
+        <img src="{{cartPr.img}}" />
+        <div  class="cartValues" >
+            <h5>{{cartPr.name}}</h5>
+            <h5 style="color:green">{{cartPr.totalPrice | currency }}</h5>
+            &nbsp;<h5 class="count">{{cartPr.count}}</h5>
+        </div>
+    </div>
+
+</div>
+<div class="clearCart"><button class="product-button" id="clearCart" (click)="clearCart()">Clear Cart</button> </div>
+<div class="buyDirect"><button class="product-button" id="buyDirect" (click)="buyDirect(copyCart)" [disabled]="copyCart.length==0">Procced to Buy</button> </div>
+</diV>

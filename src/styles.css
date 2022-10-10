@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family:sans-serif,monospace;
+    margin: 0%;
+    padding:0%;
+}
+.product-button{
+    color:white;
+    background-color: slateblue;
+    border: 1px solid slateblue;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-weight: 400;
+}
+.product-button:hover{
+    color:slateblue;
+    background-color: white;
+    border: 1px solid slateblue;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+
+}

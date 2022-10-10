@@ -1,0 +1,38 @@
+<div class="top-bar">
+    <h3>PettiKadai</h3>
+    <ul class="top-ul">
+        <li class="top-li"><a routerLink="" class="top-li-a">Home</a></li>
+        <li class="top-li" id="dropdown"><a class="top-li-a">
+            <button class="dropbtn">Categories 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a (click)="navigateAccessories()">Accessories</a>
+              <a (click)="navigateElectronics()">Electronics</a>
+            </div>
+          </a></li>
+        <li class="top-li"><a (click)="routeOrders()" class="top-li-a">Orders</a></li>
+        <li class="top-li"><a routerLink="empty" class="top-li-a">About</a></li>
+        <li class="top-li"><a routerLink="cart" class="top-li-a">Cart</a></li>
+        <li class="top-li"><a routerLink="empty" class="top-li-a">Contact</a></li>
+        <li class="top-li"><a routerLink="login" class="top-li-a">{{userNAME}}</a></li>
+        <li class="top-li"><input type="text" placeholder="search ..." [(ngModel)]="searched" (keyup)="searching(this.searched)" (ngModelChange)="searching(this.searched)" /></li>
+    </ul>
+</div>
+<app-front *ngIf="routes=='/';else elseBlock" [searchedWord]="searched"></app-front>
+<ng-template #elseBlock>
+<router-outlet></router-outlet>
+</ng-template>
+<div class="nav">
+<button class="product-button" (click)="goBack()">Back</button> &nbsp; &nbsp;
+<button class="product-button" (click)="goNext()">Next</button>
+</div>
+<div class="bottom-bar">
+
+    <ul class="bottom-ul">
+        <li class="bottom-li"><a routerLink="" class="bottom-li-a">Home</a></li>
+        <li class="bottom-li"><a class="bottom-li-a">Orders</a></li>
+        <li class="bottom-li"><a class="bottom-li-a">About</a></li>
+        <li class="bottom-li"><a class="bottom-li-a">Contact</a></li>
+    </ul>
+</div>

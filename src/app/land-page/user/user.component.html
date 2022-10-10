@@ -1,0 +1,19 @@
+<div class="login">
+    <div class="loginform">
+        <form [formGroup]="loginforms" (ngSubmit)="login()">
+        <br>
+        <h3>PettiKadai</h3><br>
+        <input type="text" formControlName="username" placeholder="enter username" />
+        <span *ngIf="loginforms.get('username')?.touched&&loginforms.get('username')?.hasError('required')" >username is required</span>
+        <br>
+        <input type="password" formControlName="password" placeholder="enter password" />
+        <span *ngIf="loginforms.get('password')?.touched&&loginforms.get('password')?.hasError('required')">password is required</span>
+        <span *ngIf="loginforms.get('password')?.hasError('minlength')">password should atleast length 6</span>
+        <br>
+        <br>
+        <button style="float: left; margin-left: 20px; " type="submit" class="product-button"  [disabled]="!loginforms.valid">Login</button> &nbsp; &nbsp; 
+        <a (click)="navigateForget()" style="color:green;text-decoration:none;">forget password ?</a> <br><br>
+        <button style="float: right; margin-right: 20px; " (click)="navigateRegister()"  class="product-button">Sign up</button>
+    </form>
+    </div>
+</div>
